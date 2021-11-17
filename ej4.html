@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ej4.css">
+</head>
+<body>
+    <h2>ejercicio1</h2>
+    <button class="boton1" id="boton1">Rojo</button>
+    &nbsp;
+    <button class="boton2" id="boton2">Azul</button>
+    &nbsp;
+    <button class="boton3" id="boton3">Verde</button>
+
+<script>
+    var boton = document.getElementsByClassName('boton1')[0];
+    var rojo = document.getElementById('boton1');
+    var azul = document.getElementById('boton2');
+    var verde = document.getElementById('boton3');
+
+rojo.addEventListener('click', function() {
+        /*boton.classList.add('rojo');*/
+rojo.style.backgroundColor= 'red';
+
+        });
+azul.addEventListener('click', function() {
+    azul.style.backgroundColor= 'blue';
+        });
+verde.addEventListener('click', function() {
+    verde.style.backgroundColor= 'green';
+        });
+
+</script>
+
+<h2>ejercicio2</h2>
+<textarea name="Texto" id="texto" cols="30" rows="10"></textarea>
+<button class="cuentatext" id="ctext">Contar texto</button>
+<script>
+
+    var area = document.getElementById('texto'); 
+    var cuenta = document.getElementById('ctext');
+
+    cuenta.addEventListener('click', function() {
+    document.write(area.value.length);
+        });
+
+</script>
+<h2>ejercicio3</h2>
+<script>
+var alumnos = [
+
+{
+
+  nombre: 'Juan Gomez',
+
+  nota: 7
+
+}, {
+
+  nombre: 'Pedro Rodriguez',
+
+  nota: 4
+
+}, {
+
+  nombre: 'Roxana García',
+
+  nota: 8
+
+}, {
+
+  nombre: 'Luciano Lopez',
+
+  nota: 5
+
+}, {
+
+  nombre: 'Fernanda Gimenez',
+
+  nota: 6
+
+}, {
+
+  nombre: 'Florencia Martinez',
+
+  nota: 10
+
+}, {
+
+  nombre: 'Raul Sanchez',
+
+  nota: 7
+
+}, {
+
+  nombre: 'Sandra Figueroa',
+
+  nota: 8
+
+}
+
+];
+var aprobados = alumnos.filter((aprobado) => {if (aprobado.nota >= 7) {return aprobado}});
+
+
+
+console.log(aprobados);
+</script>
+
+
+
+</body>
+</html>
